@@ -13,8 +13,6 @@ export class TasksService {
     async create(createTask: CreateTaskDto): Promise<Task>  {
         const newTask = new this.taskModel(createTask);
         return newTask.save();
-
-
     }
 
     async findAll(): Promise<Task[]>  {
